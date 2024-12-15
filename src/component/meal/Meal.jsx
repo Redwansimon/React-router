@@ -1,13 +1,19 @@
+import { useNavigate } from 'react-router-dom';
 import './meal.css'
 
 const Meal = ({ meal }) => {
+    const navigate = useNavigate();
+    const handel =()=>{
+
+        navigate(-1);
+    }
 
     const { strCategory, strArea,
         strMeal
         ,
         strInstructions, strMealThumb, strTags
     } = meal;
-    console.log(strTags);
+   
     return (
         <div className='meal'>
             <h2>Name : {strMeal} </h2>
@@ -23,6 +29,7 @@ const Meal = ({ meal }) => {
                     strTags.map((str, id) => <p key={id}># {str}</p>)
                 )
             }</div>
+            <button onClick={handel}>Go Back</button>
         </div>
     );
 };

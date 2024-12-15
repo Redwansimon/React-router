@@ -1,19 +1,13 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate, useParams } from "react-router-dom";
 import Meal from "../meal/Meal";
 import './fooddetails.css'
 
 const FoodDetails = () => {
     const food =useLoaderData();
- 
+    const params = useParams();
+    console.log(params.userId);
     const meals=food.meals;
-    console.log(meals)
-    // const style ={
-       
-    //         display: "grid";
-    //         grid-template-columns: "repeat(3, 1fr)";
-    //         gap: "10px";
-        
-    // }
+
 
     return (
         <div className=''>

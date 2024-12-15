@@ -3,3 +3,13 @@
     border: 10px solid red;
     border-radius: 20px;
 }
+.btn {
+    background-color: aqua;
+}
+div{
+    display: flex;
+    flex-direction: column;
+}
+.p{
+    flex-grow: 1;
+}
