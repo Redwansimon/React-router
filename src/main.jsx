@@ -8,6 +8,8 @@ import Contact from './component/contact/Contact.jsx'
 import Home from './component/home/Home.jsx'
 import Users from './component/users/Users.jsx'
 import Userdetail from './component/userdetail/Userdetail.jsx'
+import Foods from './component/foods/Foods.jsx'
+import FoodDetails from './component/fooddetails/FoodDetails.jsx'
 const router = createBrowserRouter ([
   {
     path:"/",
@@ -25,9 +27,19 @@ const router = createBrowserRouter ([
         element:<Users></Users>
       },
       {
+        path:"/foods",
+        loader:()=>fetch("https://www.themealdb.com/api/json/v1/1/categories.php"),
+        element:<Foods></Foods>
+      },
+      {
         path:"/users/:userId",
         loader:({params})=>fetch(`https://jsonplaceholder.typicode.com/users/${params.userId}`),
         element:<Userdetail></Userdetail>
+      },
+      {
+        path:"/foods/:userId",
+        loader:({params})=>fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${params.userId}`),
+        element:<FoodDetails></FoodDetails>
       }
 
 

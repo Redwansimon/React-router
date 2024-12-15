@@ -3,7 +3,7 @@ import './use.css'
 
 const User = ({user}) => {
     const {id ,name, username,email}=user;
-
+    
     return (
         <div className='u'>
             <h2>user name:{name}</h2>

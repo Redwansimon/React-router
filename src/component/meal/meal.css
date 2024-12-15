@@ -1,0 +1,12 @@
+.meal {
+    
+    border: 10px solid salmon;
+}
+div img {
+    width: 300px;
+}
+.tag {
+    display: flex;
+    justify-content: center;
+    gap: 13px;
+}
