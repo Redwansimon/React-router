@@ -4,7 +4,7 @@ import "./header.css"
 const Header = () => {
     return (
         <div>
-            <h2>this is header section</h2>
+            <h2>this is header sections</h2>
             <ul>
                 <Link to="/">home</Link>
                <Link to="/about">About</Link>
